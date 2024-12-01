@@ -1,0 +1,932 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2F3BF9C-5A4C-49E7-8047-C321A08F827B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FacturacionPersonal.My.MyApplication</StartupObject>
+    <RootNamespace>FacturacionPersonal</RootNamespace>
+    <AssemblyName>FacturacionPersonal</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>LogoFac.ico</ApplicationIcon>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FacturacionPersonal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FacturacionPersonal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.6.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BajamarFacturacion\BajamarFacturacion\bin\Debug\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsActualizacion.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutoFacturacion.Designer.vb">
+      <DependentUpon>frmAutoFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutoFacturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyuda.designer.vb">
+      <DependentUpon>frmAyuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAyuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambioIP.designer.vb">
+      <DependentUpon>frmCambioIP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambioIP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCancelarFactura.designer.vb">
+      <DependentUpon>frmCancelarFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelarFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClsBusqueda.designer.vb">
+      <DependentUpon>frmClsBusqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClsBusqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClsBusqueda2Campos.designer.vb">
+      <DependentUpon>frmClsBusqueda2Campos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClsBusqueda2Campos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClsBusquedaPaginada.Designer.vb">
+      <DependentUpon>frmClsBusquedaPaginada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClsBusquedaPaginada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprasTimbres.designer.vb">
+      <DependentUpon>frmComprasTimbres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprasTimbres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCorreosClientesFacturas.designer.vb">
+      <DependentUpon>frmCorreosClientesFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCorreosClientesFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesgloseFacturacion.designer.vb">
+      <DependentUpon>frmDesgloseFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesgloseFacturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmisor.designer.vb">
+      <DependentUpon>frmEmisor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmisor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEsperaRespuesta.designer.vb">
+      <DependentUpon>frmEsperaRespuesta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEsperaRespuesta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcel2PDFXML.Designer.vb">
+      <DependentUpon>frmExcel2PDFXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExcel2PDFXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacturacionClientes.designer.vb">
+      <DependentUpon>frmFacturacionClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturacionClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacturar.designer.vb">
+      <DependentUpon>frmFacturar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFoliosUsados.designer.vb">
+      <DependentUpon>frmFoliosUsados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFoliosUsados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoGenerica.Designer.vb">
+      <DependentUpon>frmInfoGenerica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoGenerica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLigaVersion.designer.vb">
+      <DependentUpon>frmLigaVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLigaVersion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg.designer.vb">
+      <DependentUpon>frmMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNegocios.designer.vb">
+      <DependentUpon>frmNegocios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNegocios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReimprimirFacturas.designer.vb">
+      <DependentUpon>frmReimprimirFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReimprimirFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteFacturaCliente.designer.vb">
+      <DependentUpon>frmReporteFacturaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteFacturaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteFacturas.designer.vb">
+      <DependentUpon>frmReporteFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionaFactura.Designer.vb">
+      <DependentUpon>frmSeleccionaFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionaFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionaFacturaPago.Designer.vb">
+      <DependentUpon>frmSeleccionaFacturaPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionaFacturaPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionarImpresora.Designer.vb">
+      <DependentUpon>frmSeleccionarImpresora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionarImpresora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSepararFacturaTickets.Designer.vb">
+      <DependentUpon>frmSepararFacturaTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSepararFacturaTickets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimbresGastados.designer.vb">
+      <DependentUpon>frmTimbresGastados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimbresGastados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOGENERAL.vb" />
+    <Compile Include="MONICA.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="num2text.vb" />
+    <Compile Include="Resources\mGlobal.vb" />
+    <Compile Include="rptDesgloseIeps.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDesgloseIeps.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDesgloseIepsGrupo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDesgloseIepsGrupo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDesgloseIepsJunto.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDesgloseIepsJunto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFacturaElectronica2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaElectronica2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFacturaElectronica3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaElectronica3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFacturaElectronica4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaElectronica4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFacturaElectronicaV2-2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaElectronicaV2-2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFacturaGenericaV33.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaGenericaV33.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFacturasRealizadas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturasRealizadas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBAJAMAR.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBAJAMAR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBAJAMAR3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBAJAMAR3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBajamar33.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBajamar33.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBajamar33CANC.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBajamar33CANC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBAJAMAR4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBAJAMAR4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBAJAMARCANC.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBAJAMARCANC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFEBAJAMARISR.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFEBAJAMARISR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFENavySoluciones.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFENavySoluciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptNotaDeVenta2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNotaDeVenta2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReporteFacturaElectronicaISRV3-2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReporteFacturaElectronicaISRV3-2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReporteFacturaElectronicaV3-2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReporteFacturaElectronicaV3-2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReporteFacturaElectronicaV3_2CBB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReporteFacturaElectronicaV3_2CBB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\CONSULTASAT\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSCLIENTE\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSNavySoluciones\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSNavyUtilerias\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSTASACAMBIO\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutoFacturacion.resx">
+      <DependentUpon>frmAutoFacturacion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAyuda.resx">
+      <DependentUpon>frmAyuda.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambioIP.resx">
+      <DependentUpon>frmCambioIP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCancelarFactura.resx">
+      <DependentUpon>frmCancelarFactura.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClsBusqueda.resx">
+      <DependentUpon>frmClsBusqueda.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClsBusqueda2Campos.resx">
+      <DependentUpon>frmClsBusqueda2Campos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClsBusquedaPaginada.resx">
+      <DependentUpon>frmClsBusquedaPaginada.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComprasTimbres.resx">
+      <DependentUpon>frmComprasTimbres.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCorreosClientesFacturas.resx">
+      <DependentUpon>frmCorreosClientesFacturas.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesgloseFacturacion.resx">
+      <DependentUpon>frmDesgloseFacturacion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmisor.resx">
+      <DependentUpon>frmEmisor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEsperaRespuesta.resx">
+      <DependentUpon>frmEsperaRespuesta.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcel2PDFXML.resx">
+      <DependentUpon>frmExcel2PDFXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturacionClientes.resx">
+      <DependentUpon>frmFacturacionClientes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturar.resx">
+      <DependentUpon>frmFacturar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFoliosUsados.resx">
+      <DependentUpon>frmFoliosUsados.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoGenerica.resx">
+      <DependentUpon>frmInfoGenerica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLigaVersion.resx">
+      <DependentUpon>frmLigaVersion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsg.resx">
+      <DependentUpon>frmMsg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNegocios.resx">
+      <DependentUpon>frmNegocios.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReimprimirFacturas.resx">
+      <DependentUpon>frmReimprimirFacturas.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteFacturaCliente.resx">
+      <DependentUpon>frmReporteFacturaCliente.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteFacturas.resx">
+      <DependentUpon>frmReporteFacturas.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionaFactura.resx">
+      <DependentUpon>frmSeleccionaFactura.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionaFacturaPago.resx">
+      <DependentUpon>frmSeleccionaFacturaPago.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionarImpresora.resx">
+      <DependentUpon>frmSeleccionarImpresora.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSepararFacturaTickets.resx">
+      <DependentUpon>frmSepararFacturaTickets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimbresGastados.resx">
+      <DependentUpon>frmTimbresGastados.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDesgloseIeps.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDesgloseIeps.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDesgloseIepsGrupo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDesgloseIepsGrupo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDesgloseIepsJunto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDesgloseIepsJunto.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFacturaElectronica2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaElectronica2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFacturaElectronica3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaElectronica3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFacturaElectronica4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaElectronica4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFacturaElectronicaV2-2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaElectronicaV2-2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFacturaGenericaV33.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaGenericaV33.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFacturasRealizadas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturasRealizadas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBAJAMAR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBAJAMAR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBAJAMAR3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBAJAMAR3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBajamar33.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBajamar33.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBajamar33CANC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBajamar33CANC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBAJAMAR4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBAJAMAR4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBAJAMARCANC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBAJAMARCANC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFEBAJAMARISR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFEBAJAMARISR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptFENavySoluciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFENavySoluciones.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptNotaDeVenta2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNotaDeVenta2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReporteFacturaElectronicaISRV3-2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReporteFacturaElectronicaISRV3-2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReporteFacturaElectronicaV3-2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReporteFacturaElectronicaV3-2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReporteFacturaElectronicaV3_2CBB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReporteFacturaElectronicaV3_2CBB.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMAIL.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FacturaElectronica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdeip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDOFACTURA.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\xeyes2.png" />
+    <None Include="Web References\CONSULTASAT\Acuse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CONSULTASAT\ConsultaCFDIService.wsdl" />
+    <None Include="Web References\CONSULTASAT\ConsultaCFDIService.xsd" />
+    <None Include="Web References\CONSULTASAT\ConsultaCFDIService0.xsd" />
+    <None Include="Web References\CONSULTASAT\ConsultaCFDIService1.xsd" />
+    <None Include="Web References\CONSULTASAT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSCLIENTE\addResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSCLIENTE\Application.wsdl" />
+    <None Include="Web References\WSCLIENTE\assignResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSCLIENTE\customersResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSCLIENTE\editResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSCLIENTE\getResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSCLIENTE\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.banxico.org.mx/DgieWSWeb/DgieWS%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSTASACAMBIO\</RelPath>
+      <UpdateFromURL>http://www.banxico.org.mx/DgieWSWeb/DgieWS%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FacturacionPersonal_WSTASACAMBIO_DgieWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CONSULTASAT\</RelPath>
+      <UpdateFromURL>https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FacturacionPersonal_CONSULTASAT_ConsultaCFDIService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://facturacion.finkok.com/servicios/soap/utilities.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSNavyUtilerias\</RelPath>
+      <UpdateFromURL>https://facturacion.finkok.com/servicios/soap/utilities.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FacturacionPersonal_WSNavyUtilerias_UtilitiesSOAP</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://facturacion.finkok.com/servicios/soap/registration.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSCLIENTE\</RelPath>
+      <UpdateFromURL>https://facturacion.finkok.com/servicios/soap/registration.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FacturacionPersonal_WSCLIENTE_RegistrationSOAP</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://facturacion.finkok.com/servicios/soap/stamp.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSNavySoluciones\</RelPath>
+      <UpdateFromURL>https://facturacion.finkok.com/servicios/soap/stamp.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FacturacionPersonal_WSNavySoluciones_StampSOAP</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogoFac.ico" />
+    <Content Include="LOGONSsolologo.ico" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\FondoForms.png" />
+    <None Include="Resources\DUPLICAR64.png" />
+    <None Include="Resources\tarjetas-de-presentacion-NAVY-14.png" />
+    <None Include="Resources\tarjetas-de-presentacion-NAVY-13.png" />
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\QUITAR.png" />
+    <None Include="Resources\PREVIOUS.png" />
+    <None Include="Resources\NO.png" />
+    <None Include="Resources\NEXT.png" />
+    <None Include="Resources\LAST.png" />
+    <None Include="Resources\FIRST.png" />
+    <None Include="Resources\CANCEL.png" />
+    <None Include="Resources\BUSCAR.png" />
+    <None Include="Resources\ANTERIOR.png" />
+    <None Include="Resources\AGREGAR.png" />
+    <None Include="Resources\ACTUALIZAR.png" />
+    <None Include="Web References\WSCLIENTE\switchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavySoluciones\Application.wsdl" />
+    <None Include="Web References\WSNavySoluciones\query_pendingResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavySoluciones\quick_stampResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavySoluciones\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSNavySoluciones\sign_stampResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavySoluciones\stampedResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavySoluciones\stampResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\add_tokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\Application.wsdl" />
+    <None Include="Web References\WSNavyUtilerias\datetimeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\get_moneda_usdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\get_moneda_usd_by_dateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\get_xmlResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\report_creditResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\report_totalResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\report_uuidResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\reset_tokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSNavyUtilerias\update_tokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSTASACAMBIO\DgieWS.wsdl" />
+    <None Include="Web References\WSTASACAMBIO\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
