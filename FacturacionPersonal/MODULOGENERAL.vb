@@ -667,6 +667,7 @@ Module MODULOGENERAL
         Dim CONX As New SqlClient.SqlConnection(CADENA)
         CONX.Open()
         Dim SQL As New SqlClient.SqlCommand(QUERY, CONX)
+        SQL.CommandTimeout = 600
         Dim LEC As SqlClient.SqlDataReader
         LEC = SQL.ExecuteReader
         CB.Items.Clear()

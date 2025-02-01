@@ -154,6 +154,21 @@ Public Class frmFacturar
         CBFISRR.SelectedIndex = 0
         INICIALIZARNUD()
         ComplementosActivos()
+
+
+
+    End Sub
+    Private Sub InicializarImpuestos()
+        CHKIT.Checked = My.Settings.CfgImpuestoTrasladado
+
+        If My.Settings.CfgTrasladoIvaTasaDefault Then
+            CBFIVA.SelectedIndex = 2
+            TXTTIVA.Text = My.Settings.CfgTasaTrasladoIva.ToString
+        End If
+        If My.Settings.CfgTrasladoIepsExentoDefault Then
+            CBFIEPS.SelectedIndex = 2
+            TXTIEPS.Text = My.Settings.CfgTasaTrasladoIeps.ToString
+        End If
     End Sub
     Private Sub INICIALIZARTTT()
         TTT.SetToolTip(BTNGUARDAR, "Guardar")
@@ -214,6 +229,7 @@ Public Class frmFacturar
         Else
             GBIAPG.Enabled = False
         End If
+        InicializarImpuestos()
     End Sub
     Dim S, I, T, VIEPS, IMP, RIVA, RISR, TADV As Double
     Dim CLETRAS As New num2text
@@ -716,7 +732,7 @@ Public Class frmFacturar
             DIGITOSTC = "No Identificado"
             If LMP(CBMP.SelectedIndex) <> "1" Then
                 If TXTTAR.TextLength <> 4 Then
-                    MessageBox.Show("Debe escribir los últimos 4 dígitos de Tarjeta / Cheque", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ''MessageBox.Show("Debe escribir los últimos 4 dígitos de Tarjeta / Cheque", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     DIGITOSTC = TXTTAR.Text
                 End If

@@ -212,6 +212,14 @@
         Dim VCC As New frmCorreosClientesFacturas
         VCC.MOSTRARYENVIAR(DGV.Item(0, DGV.CurrentRow.Index).Value.ToString, DGV.Item(1, DGV.CurrentRow.Index).Value.ToString, DGV.Item(2, DGV.CurrentRow.Index).Value)
     End Sub
+    Private Sub ENVIARWHATSAPP()
+        If DGV.Item(22, DGV.CurrentRow.Index).Value = 3 Then
+            MessageBox.Show("La factura no esta activada para Enviarse (Cancelada)", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            Exit Sub
+        End If
+        Dim VCC As New frmTelefonosWaClientesFacturas
+        VCC.MOSTRARYENVIAR(DGV.Item(0, DGV.CurrentRow.Index).Value.ToString, DGV.Item(1, DGV.CurrentRow.Index).Value.ToString, DGV.Item(2, DGV.CurrentRow.Index).Value)
+    End Sub
     Private Sub BTNMAIL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNMAIL.Click
         ENVIARCORREO()
     End Sub
@@ -226,7 +234,7 @@
         MOSTRARREPORTE(REPI, "Reporte de Facturas", BDLlenatabla(QUER, frmPrincipal.CadenaConexion, DTDE.Value.Date, DTHASTA.Value.Date.AddDays(1)), "")
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-
+    Private Sub BTNWA_Click(sender As Object, e As EventArgs) Handles BTNWA.Click
+        ENVIARWHATSAPP()
     End Sub
 End Class

@@ -175,6 +175,66 @@ Namespace My
                 Return CType(Me("FacturacionPersonal_WSNavyUtilerias_UtilitiesSOAP"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property CfgImpuestoTrasladado() As Boolean
+            Get
+                Return CType(Me("CfgImpuestoTrasladado"),Boolean)
+            End Get
+            Set
+                Me("CfgImpuestoTrasladado") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property CfgTrasladoIvaTasaDefault() As Boolean
+            Get
+                Return CType(Me("CfgTrasladoIvaTasaDefault"),Boolean)
+            End Get
+            Set
+                Me("CfgTrasladoIvaTasaDefault") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0.16")>  _
+        Public Property CfgTasaTrasladoIva() As Double
+            Get
+                Return CType(Me("CfgTasaTrasladoIva"),Double)
+            End Get
+            Set
+                Me("CfgTasaTrasladoIva") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property CfgTrasladoIepsExentoDefault() As Boolean
+            Get
+                Return CType(Me("CfgTrasladoIepsExentoDefault"),Boolean)
+            End Get
+            Set
+                Me("CfgTrasladoIepsExentoDefault") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property CfgTasaTrasladoIeps() As Double
+            Get
+                Return CType(Me("CfgTasaTrasladoIeps"),Double)
+            End Get
+            Set
+                Me("CfgTasaTrasladoIeps") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -35,5 +35,20 @@
     <Setting Name="FacturacionPersonal_WSNavyUtilerias_UtilitiesSOAP" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://facturacion.finkok.com/servicios/soap/utilities</Value>
     </Setting>
+    <Setting Name="CfgImpuestoTrasladado" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CfgTrasladoIvaTasaDefault" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CfgTasaTrasladoIva" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.16</Value>
+    </Setting>
+    <Setting Name="CfgTrasladoIepsExentoDefault" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CfgTasaTrasladoIeps" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
